@@ -1,20 +1,107 @@
-html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Name Generator</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="script.js"></script>
     <style>
-        .copy-icon {
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #randomName {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #copyButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
+            font-size: 16px;
+        }
+
+        #notification {
+            display: none;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            animation: fadeOut 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; display: none; }
         }
     </style>
 </head>
 <body>
-    <h1>Random Name Generator</h1>
-    <button onclick="generateRandomName()">Generate Random Name</button>
-    <p id="randomName"></p>
-    <i class="fas fa-copy copy-icon" onclick="copyToClipboard()"></i>
+    <div>
+        <h1>Random Name Generator</h1>
+        <p id="randomName"></p>
+        <button id="copyButton">Copy</button>
+        <div id="notification"></div>
+    </div>
+
+    <script>
+        // Sample JSON data
+        const names = [
+            "John Doe",
+            "Jane Smith",
+            "Bob Johnson",
+            "Alice Williams",
+            "Charlie Brown"
+            // Add more names as needed
+        ];
+
+        // Function to generate a random name
+        function generateRandomName() {
+            const randomIndex = Math.floor(Math.random() * names.length);
+            return names[randomIndex];
+        }
+
+        // Display a random name on page load
+        document.getElementById('randomName').innerText = generateRandomName();
+
+        // Event listener for generating and copying a new random name
+        document.getElementById('copyButton').addEventListener('click', function() {
+            const newName = generateRandomName();
+            document.getElementById('randomName').innerText = newName;
+
+            // Create a temporary textarea to copy the text to the clipboard
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = newName;
+            document.body.appendChild(tempTextArea);
+
+            // Select and copy the text
+            tempTextArea.select();
+            document.execCommand('copy');
+
+            // Remove the temporary textarea
+            document.body.removeChild(tempTextArea);
+
+            // Show notification
+            const notification = document.getElementById('notification');
+            notification.innerText = `Copied to clipboard: ${newName}`;
+            notification.style.display = 'block';
+
+            // Hide notification after 2 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
