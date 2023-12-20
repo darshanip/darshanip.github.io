@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Name Generator</title>
+    <script src="https://cdn.jsdelivr.net/clipboard.js/2.0.8/clipboard.min.js"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,21 +13,28 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            background-color: #f0f0f0;
         }
 
         #randomName {
             font-size: 24px;
             margin-bottom: 20px;
+            text-align: left;
         }
 
         #copyButton {
             background-color: #4CAF50;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 20px; /* Maintain the previous button size */
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        #copyButton:hover {
+            background-color: #45a049;
         }
 
         #notification {
@@ -56,28 +64,40 @@
     </div>
 
     <script>
-        // Sample JSON data
-        const names = [
-            "John Doe",
-            "Jane Smith",
-            "Bob Johnson",
-            "Alice Williams",
-            "Charlie Brown"
-            // Add more names as needed
-        ];
+        // Function to fetch names from external CSV file
+        async function fetchNames() {
+            try {
+                const response = await fetch('names.csv'); // Replace 'names.csv' with the path to your CSV file
+                const data = await response.text();
+
+                if (data) {
+                    const names = data.split('\n').map(name => name.trim()).filter(name => name !== '');
+                    return names;
+                } else {
+                    console.error('Invalid CSV format or empty data in names.csv');
+                    return [];
+                }
+            } catch (error) {
+                console.error('Error fetching names:', error);
+                return [];
+            }
+        }
 
         // Function to generate a random name
-        function generateRandomName() {
+        function generateRandomName(names) {
             const randomIndex = Math.floor(Math.random() * names.length);
             return names[randomIndex];
         }
 
         // Display a random name on page load
-        document.getElementById('randomName').innerText = generateRandomName();
+        fetchNames().then(names => {
+            document.getElementById('randomName').innerText = generateRandomName(names);
+        });
 
         // Event listener for generating and copying a new random name
-        document.getElementById('copyButton').addEventListener('click', function() {
-            const newName = generateRandomName();
+        document.getElementById('copyButton').addEventListener('click', async function() {
+            const names = await fetchNames();
+            const newName = generateRandomName(names);
             document.getElementById('randomName').innerText = newName;
 
             // Create a temporary textarea to copy the text to the clipboard
