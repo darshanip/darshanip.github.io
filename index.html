@@ -71,7 +71,9 @@
                 const data = await response.text();
 
                 if (data) {
-                    const names = data.split('\n').map(name => name.trim()).filter(name => name !== '');
+                    // Parse CSV and consider the first column as names
+                    const names = data.split('\n').map(row => row.split(',')[0].trim()).filter(name => name !== '');
+
                     return names;
                 } else {
                     console.error('Invalid CSV format or empty data in names.csv');
@@ -83,10 +85,31 @@
             }
         }
 
+        // Function to sanitize and format a name
+        function formatName(name) {
+            // Remove non-alphabetic characters
+            const sanitizedName = name.replace(/[^a-zA-Z ]/g, '');
+
+            // Limit length to 20 characters
+            const truncatedName = sanitizedName.slice(0, 20);
+
+            // Ensure at most two spaces
+            const formattedName = truncatedName.replace(/\s+/g, ' ').trim();
+            
+            // Split the name by spaces
+            const nameParts = formattedName.split(' ');
+
+            // Join the first two parts with a single space
+            const result = nameParts.slice(0, 2).join(' ');
+
+            return result;
+        }
+
         // Function to generate a random name
         function generateRandomName(names) {
             const randomIndex = Math.floor(Math.random() * names.length);
-            return names[randomIndex];
+            const formattedName = formatName(names[randomIndex]);
+            return formattedName;
         }
 
         // Display a random name on page load
