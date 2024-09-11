@@ -175,6 +175,11 @@
             document.getElementById('randomName').innerText = generateRandomName(names);
         });
 
+        // Load an email on page load
+        generateEmail().then(email => {
+            document.getElementById('generatedEmail').innerText = email;
+        });
+
         // Generate and copy name
         document.getElementById('copyButton').addEventListener('click', async function() {
             const names = await fetchNames();
