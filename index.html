@@ -139,64 +139,41 @@
     <div id="notification"></div>
 
     <script>
-        
-        // Fetch first names and last names from external text files
-        async function fetchFirstNames() {
+        // Fetch names from external CSV file
+        async function fetchNames() {
             try {
-                const response = await fetch('firstnames.txt');
+                const response = await fetch('names.csv');
                 const data = await response.text();
+
                 if (data) {
-                    const firstNames = data.split('\n').map(name => name.trim()).filter(name => name !== '');
-                    return firstNames;
+                    const names = data.split('\n').map(row => row.split(',')[0].trim()).filter(name => name !== '');
+                    return names;
                 } else {
-                    console.error('Invalid or empty data in firstnames.txt');
+                    console.error('Invalid CSV format or empty data in names.csv');
                     return [];
                 }
             } catch (error) {
-                console.error('Error fetching first names:', error);
+                console.error('Error fetching names:', error);
                 return [];
             }
         }
-
-        async function fetchLastNames() {
-            try {
-                const response = await fetch('lastnames.txt');
-                const data = await response.text();
-                if (data) {
-                    const lastNames = data.split('\n').map(name => name.trim()).filter(name => name !== '');
-                    return lastNames;
-                } else {
-                    console.error('Invalid or empty data in lastnames.txt');
-                    return [];
-                }
-            } catch (error) {
-                console.error('Error fetching last names:', error);
-                return [];
-            }
-        }
-
-        // Generate a random name using first and last names
-        async function generateRandomName() {
-            const firstNames = await fetchFirstNames();
-            const lastNames = await fetchLastNames();
-
-            const randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-            const randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-
-            return formatName(`${randomFirstName} ${randomLastName}`);
-        }
-
-        // Display a random name on page load
-        generateRandomName().then(name => {
-            document.getElementById('randomName').innerText = name;
-        });
-
 
         // Sanitize and format the name
         function formatName(name) {
             const sanitizedName = name.replace(/[^a-zA-Z ]/g, '').slice(0, 20).replace(/\s+/g, ' ').trim();
             return sanitizedName.split(' ').slice(0, 2).join(' ');
         }
+
+        // Generate a random name
+        function generateRandomName(names) {
+            const randomIndex = Math.floor(Math.random() * names.length);
+            return formatName(names[randomIndex]);
+        }
+
+        // Display a random name on page load
+        fetchNames().then(names => {
+            document.getElementById('randomName').innerText = generateRandomName(names);
+        });
 
         // Load an email on page load
         generateEmail().then(email => {
