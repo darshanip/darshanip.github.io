@@ -6,6 +6,7 @@
     <title>Random Name and Email Generator</title>
     <script src="https://cdn.jsdelivr.net/clipboard.js/2.0.8/clipboard.min.js"></script>
     <style>
+        /* (Same styling as before) */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -36,7 +37,6 @@
             padding: 10px;
         }
 
-        /* Add a vertical separator */
         .separator {
             width: 2px;
             background-color: #ddd;
@@ -60,7 +60,6 @@
             border: 1px solid #ddd;
         }
 
-        /* Unified button styles */
         button {
             display: inline-block;
             background-color: #4CAF50;
@@ -97,7 +96,6 @@
             100% { opacity: 0; display: none; }
         }
 
-        /* Responsive styles for screens smaller than 600px */
         @media (max-width: 600px) {
             .container {
                 flex-direction: column;
@@ -139,7 +137,7 @@
     <div id="notification"></div>
 
     <script>
-        // Fetch names from external CSV file
+        // Fetch names from external CSV file (remains the same)
         async function fetchNames() {
             try {
                 const response = await fetch('names.csv');
@@ -158,13 +156,13 @@
             }
         }
 
-        // Sanitize and format the name
+        // Sanitize and format the name (same as before)
         function formatName(name) {
             const sanitizedName = name.replace(/[^a-zA-Z ]/g, '').slice(0, 20).replace(/\s+/g, ' ').trim();
             return sanitizedName.split(' ').slice(0, 2).join(' ');
         }
 
-        // Generate a random name
+        // Generate a random name (same logic)
         function generateRandomName(names) {
             const randomIndex = Math.floor(Math.random() * names.length);
             return formatName(names[randomIndex]);
@@ -175,56 +173,43 @@
             document.getElementById('randomName').innerText = generateRandomName(names);
         });
 
-        // Load an email on page load
-        generateEmail().then(email => {
-            document.getElementById('generatedEmail').innerText = email;
-        });
+        // Mail.tm API Configuration
+        const mailTmApiUrl = 'https://api.mail.tm';
 
-        // Generate and copy name
-        document.getElementById('copyButton').addEventListener('click', async function() {
-            const names = await fetchNames();
-            const newName = generateRandomName(names);
-            document.getElementById('randomName').innerText = newName;
-
-            const tempTextArea = document.createElement('textarea');
-            tempTextArea.value = newName;
-            document.body.appendChild(tempTextArea);
-            tempTextArea.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempTextArea);
-
-            showNotification(`Copied to clipboard: ${newName}`);
-        });
-
-        // Show notification function
-        function showNotification(message) {
-            const notification = document.getElementById('notification');
-            notification.innerText = message;
-            notification.style.display = 'block';
-            setTimeout(() => {
-                notification.style.display = 'none';
-            }, 2000);
-        }
-
-        // Email generation logic
         async function generateEmail() {
-            const response = await fetch('https://www.1secmail.com/api/v1/?action=genRandomMailbox&count=1');
-            const email = await response.json();
-            return email[0];
+            const account = await fetch(`${mailTmApiUrl}/accounts`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    address: `${Math.random().toString(36).substring(2, 10)}@domain.com`,
+                    password: 'yourPassword'
+                })
+            }).then(response => response.json());
+
+            return account.address;
         }
 
-        // Load OTP from the first email
+        // Get OTP from the first email message
         async function loadOtp(email) {
-            const [user, domain] = email.split('@');
-            const messages = await fetch(`https://www.1secmail.com/api/v1/?action=getMessages&login=${user}&domain=${domain}`).then(res => res.json());
+            const tokenResponse = await fetch(`${mailTmApiUrl}/token`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ address: email, password: 'yourPassword' })
+            });
+            const token = await tokenResponse.json();
+
+            const messages = await fetch(`${mailTmApiUrl}/messages`, {
+                headers: { 'Authorization': `Bearer ${token.token}` }
+            }).then(res => res.json());
 
             if (messages.length > 0) {
-                const message = await fetch(`https://www.1secmail.com/api/v1/?action=readMessage&login=${user}&domain=${domain}&id=${messages[0].id}`).then(res => res.json());
-                const otp = /<b>(\d+)<\/b> is your One Time Password \(OTP\)/.exec(message.body);
+                const message = await fetch(`${mailTmApiUrl}/messages/${messages[0].id}`, {
+                    headers: { 'Authorization': `Bearer ${token.token}` }
+                }).then(res => res.json());
 
+                const otp = /<b>(\d+)<\/b> is your One Time Password \(OTP\)/.exec(message.html);
                 return otp ? otp[1] : 'No OTP found';
             }
-
             return 'No emails available';
         }
 
@@ -266,6 +251,16 @@
                 showNotification('No email generated yet!');
             }
         });
+
+        // Show notification function (same)
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.innerText = message;
+            notification.style.display = 'block';
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 2000);
+        }
     </script>
 </body>
 </html>
