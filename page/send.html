@@ -3,22 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Line</title>
+  <title>Random Line Raw Output</title>
 </head>
 <body>
-  <h1>Random Line from send.txt</h1>
-  <pre id="random-line">Loading...</pre>
-
-  <script>
-    async function fetchRandomLine() {
-      const response = await fetch('send.txt');
-      const text = await response.text();
-      const lines = text.split('\n');
-      const randomLine = lines[Math.floor(Math.random() * lines.length)];
-      document.getElementById('random-line').textContent = randomLine;
-    }
-    
-    fetchRandomLine();
-  </script>
+  <script src="random-line.js"></script>
 </body>
 </html>
