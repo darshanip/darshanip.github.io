@@ -6,7 +6,6 @@
     <title>Random Name and Email Generator</title>
     <script src="https://cdn.jsdelivr.net/clipboard.js/2.0.8/clipboard.min.js"></script>
     <style>
-        /* (Same styling as before) */
         body {
             font-family: Arial, sans-serif;
             display: flex;
@@ -114,17 +113,14 @@
 </head>
 <body>
     <div class="container">
-        <!-- Name Generator Section -->
         <div class="section">
             <h1>Random Name Generator</h1>
             <p id="randomName"></p>
             <button id="copyButton">Copy Name</button>
         </div>
 
-        <!-- Separator between sections -->
         <div class="separator"></div>
 
-        <!-- Email Generator Section -->
         <div class="section">
             <h1>Email Generator</h1>
             <p id="generatedEmail"></p>
@@ -137,7 +133,6 @@
     <div id="notification"></div>
 
     <script>
-        // Fetch names from external CSV file (remains the same)
         async function fetchNames() {
             try {
                 const response = await fetch('names.csv');
@@ -156,70 +151,47 @@
             }
         }
 
-        // Sanitize and format the name (same as before)
         function formatName(name) {
             const sanitizedName = name.replace(/[^a-zA-Z ]/g, '').slice(0, 20).replace(/\s+/g, ' ').trim();
             return sanitizedName.split(' ').slice(0, 2).join(' ');
         }
 
-        // Generate a random name (same logic)
         function generateRandomName(names) {
             const randomIndex = Math.floor(Math.random() * names.length);
             return formatName(names[randomIndex]);
         }
 
-        // Display a random name on page load
         fetchNames().then(names => {
             document.getElementById('randomName').innerText = generateRandomName(names);
         });
 
-        // Mail.tm API Configuration
-        const mailTmApiUrl = 'https://api.mail.tm';
-
+        // Email generation logic using temp-mail.us API
         async function generateEmail() {
-            const account = await fetch(`${mailTmApiUrl}/accounts`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    address: `${Math.random().toString(36).substring(2, 10)}@domain.com`,
-                    password: 'yourPassword'
-                })
-            }).then(response => response.json());
-
-            return account.address;
+            const response = await fetch('https://temp-mail.us/api/v1/email/new');
+            const data = await response.json();
+            return data.email;
         }
 
-        // Get OTP from the first email message
+        // Load OTP from temp-mail.us
         async function loadOtp(email) {
-            const tokenResponse = await fetch(`${mailTmApiUrl}/token`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ address: email, password: 'yourPassword' })
-            });
-            const token = await tokenResponse.json();
-
-            const messages = await fetch(`${mailTmApiUrl}/messages`, {
-                headers: { 'Authorization': `Bearer ${token.token}` }
-            }).then(res => res.json());
+            const [user, domain] = email.split('@');
+            const response = await fetch(`https://temp-mail.us/api/v1/email/${user}@${domain}/messages`);
+            const messages = await response.json();
 
             if (messages.length > 0) {
-                const message = await fetch(`${mailTmApiUrl}/messages/${messages[0].id}`, {
-                    headers: { 'Authorization': `Bearer ${token.token}` }
-                }).then(res => res.json());
-
-                const otp = /<b>(\d+)<\/b> is your One Time Password \(OTP\)/.exec(message.html);
-                return otp ? otp[1] : 'No OTP found';
+                const message = messages[0];
+                const otpMatch = /(\d{6})/.exec(message.body);
+                return otpMatch ? otpMatch[1] : 'No OTP found';
             }
+
             return 'No emails available';
         }
 
-        // Generate and display email
         document.getElementById('generateEmailButton').addEventListener('click', async function() {
             const email = await generateEmail();
             document.getElementById('generatedEmail').innerText = email;
         });
 
-        // Copy email to clipboard
         document.getElementById('copyEmailButton').addEventListener('click', function() {
             const email = document.getElementById('generatedEmail').innerText;
             if (email) {
@@ -234,7 +206,6 @@
             }
         });
 
-        // Copy OTP to clipboard
         document.getElementById('copyOtpButton').addEventListener('click', async function() {
             const email = document.getElementById('generatedEmail').innerText;
             if (email) {
@@ -252,7 +223,6 @@
             }
         });
 
-        // Show notification function (same)
         function showNotification(message) {
             const notification = document.getElementById('notification');
             notification.innerText = message;
