@@ -1,70 +1,120 @@
 <!DOCTYPE html>
-<html lang="mr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Assembly Constituency Selector</title>
+  <title>Assembly Selector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #f4f4f4;
-      padding: 30px;
+      margin: 0;
+      padding: 20px;
     }
+
     .container {
       max-width: 500px;
       background: #fff;
       margin: auto;
       padding: 20px;
-      border-radius: 8px;
+      border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
+
     h2 {
       text-align: center;
-      color: #333;
+      margin-bottom: 20px;
     }
+
     label {
-      margin-top: 15px;
       display: block;
-      color: #555;
+      margin-top: 15px;
+      color: #333;
+      font-weight: 500;
     }
+
     select, input {
       width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      border-radius: 5px;
+      padding: 10px;
+      margin-top: 6px;
+      border-radius: 6px;
       border: 1px solid #ccc;
+      font-size: 16px;
     }
+
     .output-box {
-      background: #e0ffe0;
+      background: #eefcec;
       padding: 15px;
       margin-top: 20px;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: bold;
-      color: #333;
-      white-space: pre-wrap;
+      color: #2a4d2e;
+      word-break: break-word;
+    }
+
+    .copy-btn {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .copy-btn:hover {
+      background: #45a049;
+    }
+
+    .copied-popup {
+      display: none;
+      color: #28a745;
+      font-size: 14px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
+
+      select, input, .copy-btn {
+        font-size: 15px;
+        padding: 9px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Assembly Constituency Selector</h2>
+    <h2>Assembly Selector</h2>
 
-    <label for="district">जिल्हा निवडा</label>
+    <label for="district">Select District (जिल्हा)</label>
     <select id="district">
-      <option value="">जिल्हा निवडा</option>
+      <option value="">Select District</option>
     </select>
 
-    <label for="constituency">मतदारसंघ निवडा</label>
+    <label for="constituency">Select Assembly (मतदारसंघ)</label>
     <select id="constituency">
-      <option value="">मतदारसंघ निवडा</option>
+      <option value="">Select Assembly</option>
     </select>
 
     <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" placeholder="उदाहरण: 500">
+    <input type="number" id="quantity" placeholder="Example: 500">
 
     <label for="refcode">Reference Code</label>
-    <input type="text" id="refcode" placeholder="उदाहरण: 0CED7">
+    <input type="text" id="refcode" placeholder="Example: 0CED7">
 
     <div class="output-box" id="outputBox">Output will be shown here.</div>
+    <button class="copy-btn" onclick="copyOutput()">Copy Output</button>
+    <div class="copied-popup" id="copiedPopup">Copied!</div>
   </div>
 
   <script>
@@ -75,8 +125,9 @@
     const quantityInput = document.getElementById("quantity");
     const refcodeInput = document.getElementById("refcode");
     const outputBox = document.getElementById("outputBox");
+    const copiedPopup = document.getElementById("copiedPopup");
 
-    // Fetch JSON file
+    // Load data from external file
     fetch('command-data.json')
       .then(response => response.json())
       .then(jsonData => {
@@ -98,7 +149,7 @@
     }
 
     districtSelect.addEventListener("change", () => {
-      constituencySelect.innerHTML = '<option value="">मतदारसंघ निवडा</option>';
+      constituencySelect.innerHTML = '<option value="">Select Assembly</option>';
       const selectedDistrict = districtSelect.value;
       if (data[selectedDistrict]) {
         const constituencies = data[selectedDistrict];
@@ -128,6 +179,18 @@
         outputBox.textContent = `${refcode} ${quantity} "${district}" "${constituency}" ${no} "${region}"`;
       } else {
         outputBox.textContent = "Output will be shown here.";
+      }
+    }
+
+    function copyOutput() {
+      const text = outputBox.textContent;
+      if (text && text !== "Output will be shown here.") {
+        navigator.clipboard.writeText(text).then(() => {
+          copiedPopup.style.display = 'block';
+          setTimeout(() => {
+            copiedPopup.style.display = 'none';
+          }, 1500);
+        });
       }
     }
   </script>
