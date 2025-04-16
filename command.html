@@ -96,12 +96,12 @@
   <div class="container">
     <h2>Assembly Selector</h2>
 
-    <label for="district">Select District (जिल्हा)</label>
+    <label for="district">Select District</label>
     <select id="district">
       <option value="">Select District</option>
     </select>
 
-    <label for="constituency">Select Assembly (मतदारसंघ)</label>
+    <label for="constituency">Select Assembly</label>
     <select id="constituency">
       <option value="">Select Assembly</option>
     </select>
@@ -127,7 +127,6 @@
     const outputBox = document.getElementById("outputBox");
     const copiedPopup = document.getElementById("copiedPopup");
 
-    // Load data from external file
     fetch('command-data.json')
       .then(response => response.json())
       .then(jsonData => {
@@ -140,7 +139,8 @@
       });
 
     function populateDistricts() {
-      for (const district in data) {
+      const districts = Object.keys(data).sort((a, b) => a.localeCompare(b, 'hi'));
+      for (const district of districts) {
         const option = document.createElement("option");
         option.value = district;
         option.textContent = district;
