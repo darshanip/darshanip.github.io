@@ -1,0 +1,1226 @@
+{
+    "नंदुरबार": {
+        "अक्कलकुवा (ST)": {
+            "no": 1,
+            "region": "North Maharashtra"
+        },
+        "शहादा (ST)": {
+            "no": 2,
+            "region": "North Maharashtra"
+        },
+        "नंदुरबार (ST)": {
+            "no": 3,
+            "region": "North Maharashtra"
+        },
+        "नवापूर (ST)": {
+            "no": 4,
+            "region": "North Maharashtra"
+        }
+    },
+    "धुळे": {
+        "साक्री (ST)": {
+            "no": 5,
+            "region": "North Maharashtra"
+        },
+        "धुळे ग्रामीण": {
+            "no": 6,
+            "region": "North Maharashtra"
+        },
+        "धुळे शहर": {
+            "no": 7,
+            "region": "North Maharashtra"
+        },
+        "सिंदखेडा": {
+            "no": 8,
+            "region": "North Maharashtra"
+        },
+        "शिरपूर (ST)": {
+            "no": 9,
+            "region": "North Maharashtra"
+        }
+    },
+    "जळगाव": {
+        "चोपडा (ST)": {
+            "no": 10,
+            "region": "North Maharashtra"
+        },
+        "रावेर": {
+            "no": 11,
+            "region": "North Maharashtra"
+        },
+        "भुसावळ (SC)": {
+            "no": 12,
+            "region": "North Maharashtra"
+        },
+        "जळगाव शहर": {
+            "no": 13,
+            "region": "North Maharashtra"
+        },
+        "जळगाव ग्रामीण": {
+            "no": 14,
+            "region": "North Maharashtra"
+        },
+        "अमळनेर": {
+            "no": 15,
+            "region": "North Maharashtra"
+        },
+        "एरंडोल": {
+            "no": 16,
+            "region": "North Maharashtra"
+        },
+        "चाळीसगाव": {
+            "no": 17,
+            "region": "North Maharashtra"
+        },
+        "पाचोरा": {
+            "no": 18,
+            "region": "North Maharashtra"
+        },
+        "जामनेर": {
+            "no": 19,
+            "region": "North Maharashtra"
+        },
+        "मुक्ताईनगर": {
+            "no": 20,
+            "region": "North Maharashtra"
+        }
+    },
+    "बुलढाणा": {
+        "मलकापूर": {
+            "no": 21,
+            "region": "Vidarbha"
+        },
+        "बुलढाणा": {
+            "no": 22,
+            "region": "Vidarbha"
+        },
+        "चिखली": {
+            "no": 23,
+            "region": "Vidarbha"
+        },
+        "सिंदखेड राजा": {
+            "no": 24,
+            "region": "Vidarbha"
+        },
+        "मेहकर": {
+            "no": 25,
+            "region": "Vidarbha"
+        },
+        "खामगांव": {
+            "no": 26,
+            "region": "Vidarbha"
+        },
+        "जळगाव (जामोद)": {
+            "no": 27,
+            "region": "Vidarbha"
+        }
+    },
+    "अकोला": {
+        "अकोट": {
+            "no": 28,
+            "region": "Vidarbha"
+        },
+        "बाळापूर": {
+            "no": 29,
+            "region": "Vidarbha"
+        },
+        "अकोला पश्चिम": {
+            "no": 30,
+            "region": "Vidarbha"
+        },
+        "अकोला पूर्व": {
+            "no": 31,
+            "region": "Vidarbha"
+        },
+        "मुर्तिजापूर (SC)": {
+            "no": 32,
+            "region": "Vidarbha"
+        }
+    },
+    "वाशिम": {
+        "रिसोड": {
+            "no": 33,
+            "region": "Vidarbha"
+        },
+        "वाशिम (SC)": {
+            "no": 34,
+            "region": "Vidarbha"
+        },
+        "कारंजा": {
+            "no": 35,
+            "region": "Vidarbha"
+        }
+    },
+    "अमरावती": {
+        "धामणगाव रेल्वे": {
+            "no": 36,
+            "region": "Vidarbha"
+        },
+        "बडनेरा": {
+            "no": 37,
+            "region": "Vidarbha"
+        },
+        "अमरावती": {
+            "no": 38,
+            "region": "Vidarbha"
+        },
+        "तिवसा": {
+            "no": 39,
+            "region": "Vidarbha"
+        },
+        "दर्यापूर (SC)": {
+            "no": 40,
+            "region": "Vidarbha"
+        },
+        "मेळघाट (ST)": {
+            "no": 41,
+            "region": "Vidarbha"
+        },
+        "अचलपूर": {
+            "no": 42,
+            "region": "Vidarbha"
+        },
+        "मोर्शी": {
+            "no": 43,
+            "region": "Vidarbha"
+        }
+    },
+    "वर्धा": {
+        "आर्वी": {
+            "no": 44,
+            "region": "Vidarbha"
+        },
+        "देवळी": {
+            "no": 45,
+            "region": "Vidarbha"
+        },
+        "हिंगणघाट": {
+            "no": 46,
+            "region": "Vidarbha"
+        },
+        "वर्धा": {
+            "no": 47,
+            "region": "Vidarbha"
+        }
+    },
+    "नागपूर": {
+        "काटोल": {
+            "no": 48,
+            "region": "Vidarbha"
+        },
+        "सावनेर": {
+            "no": 49,
+            "region": "Vidarbha"
+        },
+        "हिंगणा": {
+            "no": 50,
+            "region": "Vidarbha"
+        },
+        "उमरेड (SC)": {
+            "no": 51,
+            "region": "Vidarbha"
+        },
+        "नागपूर दक्षिण पश्चिम": {
+            "no": 52,
+            "region": "Vidarbha"
+        },
+        "नागपूर दक्षिण": {
+            "no": 53,
+            "region": "Vidarbha"
+        },
+        "नागपूर पूर्व": {
+            "no": 54,
+            "region": "Vidarbha"
+        },
+        "नागपूर मध्य": {
+            "no": 55,
+            "region": "Vidarbha"
+        },
+        "नागपूर पश्चिम": {
+            "no": 56,
+            "region": "Vidarbha"
+        },
+        "नागपूर उत्तर (SC)": {
+            "no": 57,
+            "region": "Vidarbha"
+        },
+        "कामठी": {
+            "no": 58,
+            "region": "Vidarbha"
+        },
+        "रामटेक": {
+            "no": 59,
+            "region": "Vidarbha"
+        }
+    },
+    "भंडारा": {
+        "तुमसर": {
+            "no": 60,
+            "region": "Vidarbha"
+        },
+        "भंडारा (SC)": {
+            "no": 61,
+            "region": "Vidarbha"
+        },
+        "साकोली": {
+            "no": 62,
+            "region": "Vidarbha"
+        }
+    },
+    "गोंदिया": {
+        "अर्जुनी मोरगाव (SC)": {
+            "no": 63,
+            "region": "Vidarbha"
+        },
+        "तिरोरा": {
+            "no": 64,
+            "region": "Vidarbha"
+        },
+        "गोंदिया": {
+            "no": 65,
+            "region": "Vidarbha"
+        },
+        "आमगाव (ST)": {
+            "no": 66,
+            "region": "Vidarbha"
+        }
+    },
+    "गडचिरोली": {
+        "आरमोरी (ST)": {
+            "no": 67,
+            "region": "Vidarbha"
+        },
+        "गडचिरोली (ST)": {
+            "no": 68,
+            "region": "Vidarbha"
+        },
+        "अहेरी (ST)": {
+            "no": 69,
+            "region": "Vidarbha"
+        }
+    },
+    "चंद्रपूर": {
+        "राजुरा": {
+            "no": 70,
+            "region": "Vidarbha"
+        },
+        "चंद्रपूर (SC)": {
+            "no": 71,
+            "region": "Vidarbha"
+        },
+        "बल्लारपूर": {
+            "no": 72,
+            "region": "Vidarbha"
+        },
+        "ब्रम्हपुरी": {
+            "no": 73,
+            "region": "Vidarbha"
+        },
+        "चिमूर": {
+            "no": 74,
+            "region": "Vidarbha"
+        },
+        "वरोरा": {
+            "no": 75,
+            "region": "Vidarbha"
+        }
+    },
+    "यवतमाळ": {
+        "वणी": {
+            "no": 76,
+            "region": "Vidarbha"
+        },
+        "राळेगाव": {
+            "no": 77,
+            "region": "Vidarbha"
+        },
+        "यवतमाळ": {
+            "no": 78,
+            "region": "Vidarbha"
+        },
+        "दिग्रस": {
+            "no": 79,
+            "region": "Vidarbha"
+        },
+        "आर्णी": {
+            "no": 80,
+            "region": "Vidarbha"
+        },
+        "पुसद": {
+            "no": 81,
+            "region": "Vidarbha"
+        },
+        "उमरखेड (SC)": {
+            "no": 82,
+            "region": "Vidarbha"
+        }
+    },
+    "नांदेड": {
+        "किनवट": {
+            "no": 83,
+            "region": "Marathwada"
+        },
+        "हदगाव": {
+            "no": 84,
+            "region": "Marathwada"
+        },
+        "भोकर": {
+            "no": 85,
+            "region": "Marathwada"
+        },
+        "नांदेड उत्तर": {
+            "no": 86,
+            "region": "Marathwada"
+        },
+        "नांदेड दक्षिण": {
+            "no": 87,
+            "region": "Marathwada"
+        },
+        "लोहा": {
+            "no": 88,
+            "region": "Marathwada"
+        },
+        "नायगाव": {
+            "no": 89,
+            "region": "Marathwada"
+        },
+        "देगलूर (SC)": {
+            "no": 90,
+            "region": "Marathwada"
+        },
+        "मुखेड": {
+            "no": 91,
+            "region": "Marathwada"
+        }
+    },
+    "हिंगोली": {
+        "वसमत": {
+            "no": 92,
+            "region": "Marathwada"
+        },
+        "कळमनुरी": {
+            "no": 93,
+            "region": "Marathwada"
+        },
+        "हिंगोली": {
+            "no": 94,
+            "region": "Marathwada"
+        }
+    },
+    "परभणी": {
+        "जिंतूर": {
+            "no": 95,
+            "region": "Marathwada"
+        },
+        "परभणी": {
+            "no": 96,
+            "region": "Marathwada"
+        },
+        "गंगाखेड": {
+            "no": 97,
+            "region": "Marathwada"
+        },
+        "पाथरी": {
+            "no": 98,
+            "region": "Marathwada"
+        }
+    },
+    "जालना": {
+        "परतूर": {
+            "no": 99,
+            "region": "Marathwada"
+        },
+        "घनसावंगी": {
+            "no": 100,
+            "region": "Marathwada"
+        },
+        "जालना": {
+            "no": 101,
+            "region": "Marathwada"
+        },
+        "बदनापूर (SC)": {
+            "no": 102,
+            "region": "Marathwada"
+        },
+        "भोकरदन": {
+            "no": 103,
+            "region": "Marathwada"
+        }
+    },
+    "छत्रपती संभाजीनगर": {
+        "सिल्लोड": {
+            "no": 104,
+            "region": "Marathwada"
+        },
+        "कन्नड": {
+            "no": 105,
+            "region": "Marathwada"
+        },
+        "फुलंब्री": {
+            "no": 106,
+            "region": "Marathwada"
+        },
+        "छत्रपती संभाजीनगर (मध्य)": {
+            "no": 107,
+            "region": "Marathwada"
+        },
+        "छत्रपती संभाजीनगर(पश्चिम) (SC)": {
+            "no": 108,
+            "region": "Marathwada"
+        },
+        "छत्रपती संभाजीनगर (पूर्व)": {
+            "no": 109,
+            "region": "Marathwada"
+        },
+        "पैठण": {
+            "no": 110,
+            "region": "Marathwada"
+        },
+        "गंगापूर": {
+            "no": 111,
+            "region": "Marathwada"
+        },
+        "वैजापूर": {
+            "no": 112,
+            "region": "Marathwada"
+        }
+    },
+    "नाशिक": {
+        "नांदगाव": {
+            "no": 113,
+            "region": "North Maharashtra"
+        },
+        "मालेगाव (मध्य)": {
+            "no": 114,
+            "region": "North Maharashtra"
+        },
+        "मालेगाव (बाह्य)": {
+            "no": 115,
+            "region": "North Maharashtra"
+        },
+        "बागलाण (ST)": {
+            "no": 116,
+            "region": "North Maharashtra"
+        },
+        "कळवण (ST)": {
+            "no": 117,
+            "region": "North Maharashtra"
+        },
+        "चांदवड": {
+            "no": 118,
+            "region": "North Maharashtra"
+        },
+        "येवला": {
+            "no": 119,
+            "region": "North Maharashtra"
+        },
+        "सिन्नर": {
+            "no": 120,
+            "region": "North Maharashtra"
+        },
+        "निफाड": {
+            "no": 121,
+            "region": "North Maharashtra"
+        },
+        "दिंडोरी (ST)": {
+            "no": 122,
+            "region": "North Maharashtra"
+        },
+        "नाशिक पूर्व": {
+            "no": 123,
+            "region": "North Maharashtra"
+        },
+        "नाशिक (मध्य)": {
+            "no": 124,
+            "region": "North Maharashtra"
+        },
+        "नाशिक पश्चिम": {
+            "no": 125,
+            "region": "North Maharashtra"
+        },
+        "देवळाली (SC)": {
+            "no": 126,
+            "region": "North Maharashtra"
+        },
+        "इगतपुरी (ST)": {
+            "no": 127,
+            "region": "North Maharashtra"
+        }
+    },
+    "पालघर": {
+        "डहाणू (ST)": {
+            "no": 128,
+            "region": "Konkan"
+        },
+        "विक्रमगड (ST)": {
+            "no": 129,
+            "region": "Konkan"
+        },
+        "पालघर (ST)": {
+            "no": 130,
+            "region": "Konkan"
+        },
+        "बोईसर (ST)": {
+            "no": 131,
+            "region": "Konkan"
+        },
+        "नालासोपारा": {
+            "no": 132,
+            "region": "Konkan"
+        },
+        "वसई": {
+            "no": 133,
+            "region": "Konkan"
+        }
+    },
+    "ठाणे": {
+        "भिवंडी ग्रामीण (ST)": {
+            "no": 134,
+            "region": "Konkan"
+        },
+        "शहापूर(ST)": {
+            "no": 135,
+            "region": "Konkan"
+        },
+        "भिवंडी पश्चिम": {
+            "no": 136,
+            "region": "Konkan"
+        },
+        "भिवंडी पूर्व": {
+            "no": 137,
+            "region": "Konkan"
+        },
+        "कल्याण पश्चिम": {
+            "no": 138,
+            "region": "Konkan"
+        },
+        "मुरबाड": {
+            "no": 139,
+            "region": "Konkan"
+        },
+        "अंबरनाथ (SC)": {
+            "no": 140,
+            "region": "Konkan"
+        },
+        "उल्हासनगर": {
+            "no": 141,
+            "region": "Konkan"
+        },
+        "कल्याण पूर्व": {
+            "no": 142,
+            "region": "Konkan"
+        },
+        "डोंबिवली": {
+            "no": 143,
+            "region": "Konkan"
+        },
+        "कल्याण ग्रामीण": {
+            "no": 144,
+            "region": "Konkan"
+        },
+        "मीरा भाईंदर": {
+            "no": 145,
+            "region": "Konkan"
+        },
+        "ओवळा माजीवाडा": {
+            "no": 146,
+            "region": "Konkan"
+        },
+        "कोपरी पाचपाखाडी": {
+            "no": 147,
+            "region": "Konkan"
+        },
+        "ठाणे": {
+            "no": 148,
+            "region": "Konkan"
+        },
+        "मुंब्रा कळवा": {
+            "no": 149,
+            "region": "Konkan"
+        },
+        "ऐरोली": {
+            "no": 150,
+            "region": "Konkan"
+        },
+        "बेलापूर": {
+            "no": 151,
+            "region": "Konkan"
+        }
+    },
+    "मुंबई उपनगर": {
+        "बोरिवली": {
+            "no": 152,
+            "region": "Mumbai"
+        },
+        "दहिसर": {
+            "no": 153,
+            "region": "Mumbai"
+        },
+        "मागाठाणे": {
+            "no": 154,
+            "region": "Mumbai"
+        },
+        "मुलुंड": {
+            "no": 155,
+            "region": "Mumbai"
+        },
+        "विक्रोळी": {
+            "no": 156,
+            "region": "Mumbai"
+        },
+        "भांडुप पश्चिम": {
+            "no": 157,
+            "region": "Mumbai"
+        },
+        "जोगेश्वरी पूर्व": {
+            "no": 158,
+            "region": "Mumbai"
+        },
+        "दिंडोशी": {
+            "no": 159,
+            "region": "Mumbai"
+        },
+        "कांदिवली पूर्व": {
+            "no": 160,
+            "region": "Mumbai"
+        },
+        "चारकोप": {
+            "no": 161,
+            "region": "Mumbai"
+        },
+        "मालाड पश्चिम": {
+            "no": 162,
+            "region": "Mumbai"
+        },
+        "गोरेगाव": {
+            "no": 163,
+            "region": "Mumbai"
+        },
+        "वर्सोवा": {
+            "no": 164,
+            "region": "Mumbai"
+        },
+        "अंधेरी पश्चिम": {
+            "no": 165,
+            "region": "Mumbai"
+        },
+        "अंधेरी पूर्व": {
+            "no": 166,
+            "region": "Mumbai"
+        },
+        "विलेपार्ले": {
+            "no": 167,
+            "region": "Mumbai"
+        },
+        "चांदिवली": {
+            "no": 168,
+            "region": "Mumbai"
+        },
+        "घाटकोपर पश्चिम": {
+            "no": 169,
+            "region": "Mumbai"
+        },
+        "घाटकोपर पूर्व": {
+            "no": 170,
+            "region": "Mumbai"
+        },
+        "मानखुर्द शिवाजीनगर": {
+            "no": 171,
+            "region": "Mumbai"
+        },
+        "अनणुशक्तीनगर": {
+            "no": 172,
+            "region": "Mumbai"
+        },
+        "चेंबूर": {
+            "no": 173,
+            "region": "Mumbai"
+        },
+        "कुर्ला (SC)": {
+            "no": 174,
+            "region": "Mumbai"
+        },
+        "कलिना": {
+            "no": 175,
+            "region": "Mumbai"
+        },
+        "वांद्रे पूर्व": {
+            "no": 176,
+            "region": "Mumbai"
+        },
+        "वांद्रे पश्चिम": {
+            "no": 177,
+            "region": "Mumbai"
+        }
+    },
+    "मुंबई शहर": {
+        "धारावी (SC)": {
+            "no": 178,
+            "region": "Mumbai"
+        },
+        "सायन कोळीवाडा": {
+            "no": 179,
+            "region": "Mumbai"
+        },
+        "वडाळा": {
+            "no": 180,
+            "region": "Mumbai"
+        },
+        "माहीम": {
+            "no": 181,
+            "region": "Mumbai"
+        },
+        "वरळी": {
+            "no": 182,
+            "region": "Mumbai"
+        },
+        "शिवडी": {
+            "no": 183,
+            "region": "Mumbai"
+        },
+        "भायखळा": {
+            "no": 184,
+            "region": "Mumbai"
+        },
+        "मलबार हिल": {
+            "no": 185,
+            "region": "Mumbai"
+        },
+        "मुंबादेवी": {
+            "no": 186,
+            "region": "Mumbai"
+        },
+        "कुलाबा": {
+            "no": 187,
+            "region": "Mumbai"
+        }
+    },
+    "रायगड": {
+        "पनवेल": {
+            "no": 188,
+            "region": "Konkan"
+        },
+        "कर्जत": {
+            "no": 189,
+            "region": "Konkan"
+        },
+        "उरण": {
+            "no": 190,
+            "region": "Konkan"
+        },
+        "पेण": {
+            "no": 191,
+            "region": "Konkan"
+        },
+        "अलिबाग": {
+            "no": 192,
+            "region": "Konkan"
+        },
+        "श्रीवर्धन": {
+            "no": 193,
+            "region": "Konkan"
+        },
+        "महाड": {
+            "no": 194,
+            "region": "Konkan"
+        }
+    },
+    "पुणे": {
+        "जुन्नर": {
+            "no": 195,
+            "region": "West Maharashtra"
+        },
+        "आंबेगाव": {
+            "no": 196,
+            "region": "West Maharashtra"
+        },
+        "खेड आळंदी": {
+            "no": 197,
+            "region": "West Maharashtra"
+        },
+        "शिरूर": {
+            "no": 198,
+            "region": "West Maharashtra"
+        },
+        "दौंड": {
+            "no": 199,
+            "region": "West Maharashtra"
+        },
+        "इंदापूर": {
+            "no": 200,
+            "region": "West Maharashtra"
+        },
+        "बारामती": {
+            "no": 201,
+            "region": "West Maharashtra"
+        },
+        "पुरंदर": {
+            "no": 202,
+            "region": "West Maharashtra"
+        },
+        "भोर": {
+            "no": 203,
+            "region": "West Maharashtra"
+        },
+        "मावळ": {
+            "no": 204,
+            "region": "West Maharashtra"
+        },
+        "चिंचवड": {
+            "no": 205,
+            "region": "West Maharashtra"
+        },
+        "पिंपरी (SC)": {
+            "no": 206,
+            "region": "West Maharashtra"
+        },
+        "भोसरी": {
+            "no": 207,
+            "region": "West Maharashtra"
+        },
+        "वडगाव शेरी": {
+            "no": 208,
+            "region": "West Maharashtra"
+        },
+        "शिवाजीनगर": {
+            "no": 209,
+            "region": "West Maharashtra"
+        },
+        "कोथरूड": {
+            "no": 210,
+            "region": "West Maharashtra"
+        },
+        "खडकवासला": {
+            "no": 211,
+            "region": "West Maharashtra"
+        },
+        "पर्वती": {
+            "no": 212,
+            "region": "West Maharashtra"
+        },
+        "हडपसर": {
+            "no": 213,
+            "region": "West Maharashtra"
+        },
+        "पुणे कॅंटॉन्मेंट (SC)": {
+            "no": 214,
+            "region": "West Maharashtra"
+        },
+        "कसबा पेठ": {
+            "no": 215,
+            "region": "West Maharashtra"
+        }
+    },
+    "नगर": {
+        "अकोले (ST)": {
+            "no": 216,
+            "region": "North Maharashtra"
+        },
+        "संगमनेर": {
+            "no": 217,
+            "region": "North Maharashtra"
+        },
+        "शिर्डी": {
+            "no": 218,
+            "region": "North Maharashtra"
+        },
+        "कोपरगाव": {
+            "no": 219,
+            "region": "North Maharashtra"
+        },
+        "श्रीरामपूर (SC)": {
+            "no": 220,
+            "region": "North Maharashtra"
+        },
+        "नेवासा": {
+            "no": 221,
+            "region": "North Maharashtra"
+        },
+        "शेवगाव": {
+            "no": 222,
+            "region": "North Maharashtra"
+        },
+        "राहुरी": {
+            "no": 223,
+            "region": "North Maharashtra"
+        },
+        "पारनेर": {
+            "no": 224,
+            "region": "North Maharashtra"
+        },
+        "अहील्या नगर शहर": {
+            "no": 225,
+            "region": "North Maharashtra"
+        },
+        "श्रीगोंदा": {
+            "no": 226,
+            "region": "North Maharashtra"
+        },
+        "कर्जत जामखेड": {
+            "no": 227,
+            "region": "North Maharashtra"
+        }
+    },
+    "बीड": {
+        "गेवराई": {
+            "no": 228,
+            "region": "Marathwada"
+        },
+        "माजलगाव": {
+            "no": 229,
+            "region": "Marathwada"
+        },
+        "बीड": {
+            "no": 230,
+            "region": "Marathwada"
+        },
+        "आष्टी": {
+            "no": 231,
+            "region": "Marathwada"
+        },
+        "केज (SC)": {
+            "no": 232,
+            "region": "Marathwada"
+        },
+        "परळी": {
+            "no": 233,
+            "region": "Marathwada"
+        }
+    },
+    "लातूर": {
+        "लातूर ग्रामीण": {
+            "no": 234,
+            "region": "Marathwada"
+        },
+        "लातूर शहर": {
+            "no": 235,
+            "region": "Marathwada"
+        },
+        "अहमदपूर": {
+            "no": 236,
+            "region": "Marathwada"
+        },
+        "उदगीर (SC)": {
+            "no": 237,
+            "region": "Marathwada"
+        },
+        "निलंगा": {
+            "no": 238,
+            "region": "Marathwada"
+        },
+        "औसा": {
+            "no": 239,
+            "region": "Marathwada"
+        }
+    },
+    "धाराशिव": {
+        "ओमरगा (SC)": {
+            "no": 240,
+            "region": "Marathwada"
+        },
+        "तुळजापूर": {
+            "no": 241,
+            "region": "Marathwada"
+        },
+        "धाराशीव": {
+            "no": 242,
+            "region": "Marathwada"
+        },
+        "परांडा": {
+            "no": 243,
+            "region": "Marathwada"
+        }
+    },
+    "सोलापूर": {
+        "करमाळा": {
+            "no": 244,
+            "region": "West Maharashtra"
+        },
+        "माढा": {
+            "no": 245,
+            "region": "West Maharashtra"
+        },
+        "बार्शी": {
+            "no": 246,
+            "region": "West Maharashtra"
+        },
+        "मोहोळ (SC)": {
+            "no": 247,
+            "region": "West Maharashtra"
+        },
+        "सोलापूर शहर उत्तर": {
+            "no": 248,
+            "region": "West Maharashtra"
+        },
+        "सोलापूर शहर मध्य": {
+            "no": 249,
+            "region": "West Maharashtra"
+        },
+        "अक्कलकोट": {
+            "no": 250,
+            "region": "West Maharashtra"
+        },
+        "सोलापूर दक्षिण": {
+            "no": 251,
+            "region": "West Maharashtra"
+        },
+        "पंढरपूर": {
+            "no": 252,
+            "region": "West Maharashtra"
+        },
+        "सांगोला": {
+            "no": 253,
+            "region": "West Maharashtra"
+        },
+        "माळशिरस (SC)": {
+            "no": 254,
+            "region": "West Maharashtra"
+        }
+    },
+    "सातारा": {
+        "फलटण (SC)": {
+            "no": 255,
+            "region": "West Maharashtra"
+        },
+        "वाई": {
+            "no": 256,
+            "region": "West Maharashtra"
+        },
+        "कोरेगाव": {
+            "no": 257,
+            "region": "West Maharashtra"
+        },
+        "मान": {
+            "no": 258,
+            "region": "West Maharashtra"
+        },
+        "कराड उत्तर": {
+            "no": 259,
+            "region": "West Maharashtra"
+        },
+        "कराड दक्षिण": {
+            "no": 260,
+            "region": "West Maharashtra"
+        },
+        "पाटण": {
+            "no": 261,
+            "region": "West Maharashtra"
+        },
+        "सातारा": {
+            "no": 262,
+            "region": "West Maharashtra"
+        }
+    },
+    "रत्नागिरी": {
+        "दापोली": {
+            "no": 263,
+            "region": "Konkan"
+        },
+        "गुहागर": {
+            "no": 264,
+            "region": "Konkan"
+        },
+        "चिपळूण": {
+            "no": 265,
+            "region": "Konkan"
+        },
+        "रत्नागिरी": {
+            "no": 266,
+            "region": "Konkan"
+        },
+        "राजापूर": {
+            "no": 267,
+            "region": "Konkan"
+        }
+    },
+    "सिंधुदुर्ग": {
+        "कणकवली": {
+            "no": 268,
+            "region": "Konkan"
+        },
+        "कुडाळ": {
+            "no": 269,
+            "region": "Konkan"
+        },
+        "सावंतवाडी": {
+            "no": 270,
+            "region": "Konkan"
+        }
+    },
+    "कोल्हापूर": {
+        "चंदगड": {
+            "no": 271,
+            "region": "West Maharashtra"
+        },
+        "राधानगरी": {
+            "no": 272,
+            "region": "West Maharashtra"
+        },
+        "कागल": {
+            "no": 273,
+            "region": "West Maharashtra"
+        },
+        "कोल्हापूर दक्षिण": {
+            "no": 274,
+            "region": "West Maharashtra"
+        },
+        "करवीर": {
+            "no": 275,
+            "region": "West Maharashtra"
+        },
+        "कोल्हापूर उत्तर": {
+            "no": 276,
+            "region": "West Maharashtra"
+        },
+        "शाहुवाडी": {
+            "no": 277,
+            "region": "West Maharashtra"
+        },
+        "हातकणंगले (SC)": {
+            "no": 278,
+            "region": "West Maharashtra"
+        },
+        "इचलकरंजी": {
+            "no": 279,
+            "region": "West Maharashtra"
+        },
+        "शिरोळ": {
+            "no": 280,
+            "region": "West Maharashtra"
+        }
+    },
+    "सांगली": {
+        "मिरज (SC)": {
+            "no": 281,
+            "region": "West Maharashtra"
+        },
+        "सांगली": {
+            "no": 282,
+            "region": "West Maharashtra"
+        },
+        "इस्लामपूर": {
+            "no": 283,
+            "region": "West Maharashtra"
+        },
+        "शिराळा": {
+            "no": 284,
+            "region": "West Maharashtra"
+        },
+        "पळूस कडेगाव": {
+            "no": 285,
+            "region": "West Maharashtra"
+        },
+        "खानापूर": {
+            "no": 286,
+            "region": "West Maharashtra"
+        },
+        "तासगाव": {
+            "no": 287,
+            "region": "West Maharashtra"
+        },
+        "जत": {
+            "no": 288,
+            "region": "West Maharashtra"
+        }
+    }
+}
